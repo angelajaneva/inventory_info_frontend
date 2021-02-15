@@ -88,7 +88,6 @@ class CreateAnalysis extends Component {
         });
 
         axios.createAnalysis(this.state.year, files).then((response)=>{
-            console.log(response.status);
             this.setState((prevState) => {
                 const newValue = {
                     loading: false

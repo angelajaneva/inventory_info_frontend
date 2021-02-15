@@ -19,8 +19,6 @@ const LoginForm = (props) => {
 
         props.login(auth, (response)=>{
 
-            console.log(response.data)
-
             localStorage.setItem(AUTH_TOKEN, response.data);
             localStorage.setItem("EMAIL", auth.username);
 

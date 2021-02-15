@@ -10,8 +10,6 @@ function Dropzone(props) {
         multiple: false,
         accept: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         onDrop: (e) => {
-            console.log(e)
-            console.log(acceptedFiles);
             props.setFile(e);
         }
     });

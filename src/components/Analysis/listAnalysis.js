@@ -41,7 +41,6 @@ class CreateAnalysis extends Component {
                     ...newValue
                 }
             })
-            console.log(this.state)
 
         })
     };
@@ -72,7 +71,6 @@ class CreateAnalysis extends Component {
                             ...newValue
                         }
                     })
-                    console.log(this.state)
                 })
                 .catch((error) => {
                     if (error.response.status === 403){

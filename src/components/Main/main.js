@@ -75,14 +75,14 @@ export class Main extends Component {
                             <div className="animated fadeInDown">
                                 <div className="body wrapper wrapper-content animated">
                                         <ul className="nav nav-tabs border-bottom-0">
-                                            <li className={this.state.tableView === true ? "nav-item active bg-white rounded-top border-bottom-0 pointer":"nav-item bg-light rounded-top pointer"}>
-                                                <div className={this.state.tableView === true ? "nav-link active bg-white border-bottom-0 ":"nav-link bg-light rounded-top"} onClick={() => this.setTableView(true)}>
+                                            <li className={this.state.tableView === true ? "nav-item active bg-white rounded-top text-dark border-bottom-0 pointer":"nav-item bg-light rounded-top pointer"}>
+                                                <div className={this.state.tableView === true ? "nav-link active bg-white text-dark border-bottom-0 ":"nav-link bg-light rounded-top"} onClick={() => this.setTableView(true)}>
                                                     <i className="fa fa-table pr-1"/>
                                                     {this.props.t('tables')}
                                                 </div>
                                             </li>
-                                            <li className={this.state.tableView === false ? "nav-item active bg-white rounded-top pointer":"nav-item bg-light rounded-top pointer"}>
-                                                <div className={this.state.tableView === false ? "nav-link active bg-white border-bottom-0 ":"nav-link bg-light rounded-top"} onClick={() => this.setTableView(false)}>
+                                            <li className={this.state.tableView === false ? "nav-item active bg-white rounded-top text-dark pointer":"nav-item bg-light rounded-top pointer"}>
+                                                <div className={this.state.tableView === false ? "nav-link active bg-white text-dark border-bottom-0 ":"nav-link bg-light rounded-top"} onClick={() => this.setTableView(false)}>
                                                     <i className="fa fa-bar-chart pr-1"/>
                                                     {this.props.t('charts')}
                                                 </div>

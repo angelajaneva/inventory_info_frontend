@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <div>
-      <strong>EMT</strong> Inventory Info &copy; 2021
+  <div className="text-dark">
+      <strong>Copyright</strong> <a href="https://klimatskipromeni.mk/" className="text-dark">klimatskipromeni.mk</a> &copy; 2021
   </div>
 );

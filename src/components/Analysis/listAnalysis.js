@@ -130,11 +130,11 @@ class CreateAnalysis extends Component {
                                                 <td>
                                                     <a href={`/analysis/${analysis.year}`}
                                                        className="btn btn-link mx-2" title="Edit">
-                                                        <i className="fa fa-file-text bg-light"/>
+                                                        <i className="fa fa-pencil"/>
                                                     </a>
                                                     <button className={"btn btn-link mx-2"} name={analysis.year}
                                                             onClick={() => this.changeShowDialog(analysis.id)} title="Delete">
-                                                        <i className="fa fa-trash "/>
+                                                        <i className="fa fa-trash-o"/>
                                                     </button>
                                                 </td>
                                             </tr>

@@ -80,7 +80,7 @@ const TopHeader = (props) => {
                                 </NavLink>
                             </li>
                             <li className={"nav-item "}>
-                                <a href={"#"} onClick={logout} className={"nav-link"}>
+                                <a href={"#"} onClick={logout} className={"nav-link custom_font"}>
                                     {/*<span className="p-3"> {localStorage.getItem('user')}</span>*/}
                                     <i className="fa fa-sign-out"/>
                                     <span className="checkbox-label">

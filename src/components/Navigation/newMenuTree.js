@@ -10,19 +10,19 @@ const NewMenuTree = (props) => (
                checked={props.checked}
                onChange={props.onChange} />
 
-        <a href={"#collapse-"+props.id} className="p-0 my-0 ml-1" data-toggle={'collapse'} >
+        <a href={"#collapse-" + props.id} className="p-0 my-0 ml-1" data-toggle={'collapse'} >
             <label htmlFor={props.id}>
                 <span className="nav-label p-1 m-0 ml-1">{props.label}</span>
             </label>
-            <span className="fa arrow"/>
+            <span className="fa float-right"/>
         </a>
         {
             props.level === 2 ?
-                <ul className="nav nav-second-level collapse px-0" id={"collapse-"+props.id}>
+                <ul className="nav nav-second-level collapse px-0" id={"collapse-" + props.id}>
                     {props.children}
                 </ul>
                 :
-                <ul className="nav nav-third-level collapse" id={"collapse-"+props.id}>
+                <ul className="nav nav-third-level collapse" id={"collapse-" + props.id}>
                     {props.children}
                 </ul>
         }

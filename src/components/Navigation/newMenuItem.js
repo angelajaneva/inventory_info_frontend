@@ -7,7 +7,7 @@ const NewMenuItem = (props) => {
     const { t } = useTranslation();
 
     return (
-    <li className="nav-link">
+    <li className="nav-link pointer">
         <input id={props.id} className="float-left checkbox-round" type="checkbox" name={props.id}
                checked={props.checked} onChange={props.onChange}/>
         <a href="#" className="p-0 ml-1">

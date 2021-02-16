@@ -95,14 +95,14 @@ class Navigation extends Component {
                 const newValue = {
                     message: message,
                     error: !prevState.error
-                }
+                };
                 return {
                     ...prevState,
                     ...newValue
                 }
             })
         }
-    }
+    };
     
     loadGas = (yearId = null) => {
         if (yearId === null) {
@@ -142,7 +142,6 @@ class Navigation extends Component {
                 }
                 const data = response.data;
 
-                //site gasovi da bidat checked vo menito
                 for (const el of data) {
                     el.checked = false;
                     el.parent = GAS_PARENT;
@@ -205,7 +204,6 @@ class Navigation extends Component {
                 }
                 const data = response.data.sort((b, a) => a.year - b.year);
 
-                //site godini da bidat vkluceni, moze da go promenime
                 for (const el of data) {
                     el.checked = false;
                     el.name = el.year;
@@ -435,7 +433,7 @@ class Navigation extends Component {
                         const newValue = {
                             error: false,
                             message: ''
-                        }
+                        };
                         return {
                             ...prevState,
                             ...newValue
@@ -474,7 +472,10 @@ class Navigation extends Component {
         return data.map((item, index) => {
             if (item.name != null) {
                 if (isEmpty(item.tree)) {
-                    return (<NewMenuItem key={index} id={item.id} label={this.props.t(item.name)} checked={item.checked}
+                    return (<NewMenuItem key={index}
+                                         id={item.id}
+                                         label={this.props.t(item.name)}
+                                         checked={item.checked}
                                          onChange={onChange}/>)
                 } else {
                     return (
@@ -526,10 +527,15 @@ class Navigation extends Component {
     menu = () => {
         return this.state.menu.map((item, index) => {
             if (isEmpty(item.tree)) {
-                return (<MenuItem key={index} path={item.path} icon={item.icon} label={this.props.t(item.label)}/>);
+                return (<MenuItem key={index}
+                                  path={item.path}
+                                  icon={item.icon}
+                                  label={this.props.t(item.label)}/>);
             }
             return (
-                <MenuTree key={index} icon={item.icon} label={item.label}>
+                <MenuTree key={index}
+                          icon={item.icon}
+                          label={item.label}>
                     {
                         item.tree.map((treeItem, treeIndex) => {
                             if (isEmpty(treeItem.tree)) {

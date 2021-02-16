@@ -11,11 +11,12 @@ import { Provider } from 'react-redux';
 import store from './redux/store/store';
 
 import './i18next';
+import Loading from "./components/Loading/loading";
 
 ReactDOM.render(
     <ConfigProvider locale={ptBR}>
         <Provider store={store}>
-            <Suspense fallback="loading">
+            <Suspense fallback={<Loading/>}>
                 <App />
             </Suspense>
             <Messages/>

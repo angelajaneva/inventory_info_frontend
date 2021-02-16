@@ -6809,6 +6809,9 @@ body.body-small .vote-icon {
 .metismenu .collapse.in {
   display: block;
 }
+.metismenu .collapse.show {
+  display: block;
+}
 .metismenu .collapsing {
   position: relative;
   height: 0;
@@ -6826,10 +6829,16 @@ body.body-small .vote-icon {
 .mini-navbar .metismenu .collapse.in {
   opacity: 1;
 }
+.mini-navbar .metismenu .collapse.show {
+  opacity: 1;
+}
 .mini-navbar .metismenu .collapse a {
   display: none;
 }
 .mini-navbar .metismenu .collapse.in a {
+  display: block;
+}
+.mini-navbar .metismenu .collapse.show a {
   display: block;
 }
 /*

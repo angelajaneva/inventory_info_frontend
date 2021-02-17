@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const NewMenuTree = (props) => (
-    <li className="nav-link">
+    <li className="nav-link pointer">
         <input id={props.id}
                className="float-left checkbox-round"
                type="checkbox"
@@ -12,7 +12,7 @@ const NewMenuTree = (props) => (
 
         <a href={"#collapse-" + props.id} className="p-0 my-0 ml-1" data-toggle={'collapse'} aria-expanded={"false"} >
             <label htmlFor={props.id}>
-                <span className="nav-label p-1 m-0 ml-1">{props.label}</span>
+                <span className="nav-label p-1 m-0 ml-1 pointer">{props.label}</span>
             </label>
             <span className="fa float-right"/>
         </a>

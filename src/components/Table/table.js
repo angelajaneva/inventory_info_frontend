@@ -35,7 +35,7 @@ export class Table extends Component {
             <div>
                 <div className="mr-auto p-1">
                     <small>
-                        {this.props.t("Units")}: [Gg]
+                        <strong>{this.props.t("Units")}: [Gg]</strong>
                     </small>
                 </div>
                 <table className="table table-hover table-responsive-sm table_font table-bordered">

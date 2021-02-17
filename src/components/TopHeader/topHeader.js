@@ -55,7 +55,7 @@ const TopHeader = (props) => {
                             </li>
 
                             <li className={"nav-item pr-3"}>
-                                <NavLink to={"/login"} className='nav-link custom_font' activeClassName='active'>
+                                <NavLink to={"/login"} className='nav-link' activeClassName='active'>
                                     <i className="fa fa-sign-in pr-2"/>
                                     {t('Log in')}
                                 </NavLink>
@@ -80,7 +80,7 @@ const TopHeader = (props) => {
                                 </NavLink>
                             </li>
                             <li className={"nav-item "}>
-                                <a href={"#"} onClick={logout} className={"nav-link custom_font"}>
+                                <a href={"#"} onClick={logout} className={"nav-link"}>
                                     {/*<span className="p-3"> {localStorage.getItem('user')}</span>*/}
                                     <i className="fa fa-sign-out"/>
                                     <span className="checkbox-label">

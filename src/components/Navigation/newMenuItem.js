@@ -10,9 +10,9 @@ const NewMenuItem = (props) => {
     <li className="nav-link pointer">
         <input id={props.id} className="float-left checkbox-round" type="checkbox" name={props.id}
                checked={props.checked} onChange={props.onChange}/>
-        <a href="#" className="p-0 ml-1">
+        <a href="#" className="p-0 ml-1 pointer">
             <label htmlFor={props.id}>
-                <span className="nav-label p-1 m-0 ml-1">{t(props.label)}</span>
+                <span className="nav-label p-1 m-0 ml-1 pointer">{t(props.label)}</span>
             </label>
         </a>
     </li>)

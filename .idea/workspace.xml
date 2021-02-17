@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72275175-fb40-4259-8463-c926c185077f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Chart/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chart/charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/newMenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/newMenuItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/newMenuTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/newMenuTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopHeader/topHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopHeader/topHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +182,7 @@
       <workItem from="1613427523829" duration="3017000" />
       <workItem from="1613504846390" duration="9124000" />
       <workItem from="1613572456850" duration="768000" />
-      <workItem from="1613576940077" duration="1287000" />
+      <workItem from="1613576940077" duration="2117000" />
     </task>
     <servers />
   </component>

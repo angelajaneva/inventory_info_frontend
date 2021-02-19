@@ -4073,9 +4073,12 @@ body.tour-open .animated {
 /* Dropzone */
 .dropzone {
   min-height: 140px;
-  border: 1px dashed #1ab394;
+  border: 3px dashed #0d8ddb;
   background: white;
   padding: 20px 20px;
+}
+.dropzone:hover {
+  border: 3px dashed #1ab394;
 }
 .dropzone .dz-message {
   font-size: 16px;

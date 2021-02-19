@@ -144,7 +144,7 @@ class CreateAnalysis extends Component {
         return (
             <div>
                 <TopHeader/>
-                <div className="container p-5 mt-3 bg-white shadow">
+                <div className="container p-5 mt-3 bg-white shadow animated fadeInDown">
                     {
                         this.state.loading ?
                             <Loading />

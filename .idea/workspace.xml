@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72275175-fb40-4259-8463-c926c185077f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/files/Прирачник за користење.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/mk/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/mk/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/privateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/privateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/axios/axios-repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios/axios-repository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Analysis/createAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Analysis/createAnalysis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Analysis/editAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Analysis/editAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Analysis/listAnalysis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Analysis/listAnalysis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopHeader/topHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopHeader/topHeader.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,7 @@
       <workItem from="1613504846390" duration="9124000" />
       <workItem from="1613572456850" duration="768000" />
       <workItem from="1613576940077" duration="3280000" />
-      <workItem from="1613754137242" duration="2595000" />
+      <workItem from="1613754137242" duration="5026000" />
     </task>
     <servers />
   </component>

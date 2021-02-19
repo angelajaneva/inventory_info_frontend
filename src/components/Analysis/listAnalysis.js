@@ -100,7 +100,7 @@ class CreateAnalysis extends Component {
         return (
             <div >
                 <TopHeader/>
-                <div className="container p-5  bg-white mx-auto text-center shadow mt-3">
+                <div className="container p-5 animated fadeInDown  bg-white mx-auto text-center shadow mt-3">
                     <div className="row pl-3 pb-3">
                         <div className=" mr-auto">
                             <a href={"/analysis/create"} className="btn btn-primary font-weight-bolder">{this.props.t('Upload')}</a>

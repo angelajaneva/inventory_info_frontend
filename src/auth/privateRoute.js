@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { isAuth } from './auth';
+import { isAdmin } from './auth';
 import PropTypes from 'prop-types';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      isAuth() ? (
+      isAdmin() ? (
         <Component {...props} />
       ) : (
         <Redirect

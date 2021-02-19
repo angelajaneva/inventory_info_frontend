@@ -3,6 +3,7 @@ import { toastr } from 'react-redux-toastr';
 
 const USER = 'user';
 const AUTH_TOKEN = 'auth_token';
+const ROLE_ADMIN = "ROLE_ADMIN";
 
 
 export function currentUser() {
@@ -11,6 +12,10 @@ export function currentUser() {
 
 export function isAuth() {
   return localStorage.getItem('isAuth');
+}
+
+export function isAdmin() {
+  return localStorage.getItem('isAuth') && localStorage.getItem('role') === ROLE_ADMIN;
 }
 
 export function login(token = {}, user) {

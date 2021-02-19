@@ -32,7 +32,14 @@ class Login extends Component {
 
   login = (authInfo, callback) => {
     axios.login(authInfo).then((response) => {
-      callback(response);
+        if (response.status === 200) {
+            callback(response);
+            axios.getUser({"username": authInfo.username}).then((response) => {
+                if (response.status === 200) {
+                    localStorage.setItem("role", response.data.role[0].name);
+                }
+            })
+        }
     })
   };
 

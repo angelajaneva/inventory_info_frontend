@@ -162,6 +162,7 @@ class CreateAnalysis extends Component {
                                             timeFormat={false}
                                             closeOnSelect={true}
                                             initialValue={this.state.analysis.year}
+                                            inputProps={{readOnly: true}}
                                         />
                                     </div>
                                     <div className="form-group">

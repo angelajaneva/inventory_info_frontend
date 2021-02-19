@@ -31,12 +31,14 @@ class CreateAnalysis extends Component {
     }
 
     onChangeYear = (year) => {
-        this.setState(prevState => {
-            return {
-                ...prevState,
-                year: new Date(year).getFullYear()
-            }
-        })
+        if ((Number)(year)) {
+            this.setState(prevState => {
+                return {
+                    ...prevState,
+                    year: new Date(year).getFullYear()
+                }
+            }, () => alert(this.state.year))
+        }
     }
 
     onChangeFile = (file) => {
@@ -130,6 +132,7 @@ class CreateAnalysis extends Component {
                                             dateFormat={"YYYY"}
                                             timeFormat={false}
                                             closeOnSelect={true}
+                                            inputProps={{readOnly: true}}
                                         />
                                     </div>
                                     <div className="form-group">

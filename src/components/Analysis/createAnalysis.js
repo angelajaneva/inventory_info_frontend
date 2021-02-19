@@ -37,7 +37,7 @@ class CreateAnalysis extends Component {
                     ...prevState,
                     year: new Date(year).getFullYear()
                 }
-            }, () => alert(this.state.year))
+            })
         }
     }
 

@@ -129,11 +129,11 @@ class CreateAnalysis extends Component {
                                                 </td>
                                                 <td>
                                                     <a href={`/analysis/${analysis.year}`}
-                                                       className="btn btn-link mx-2" title="Edit">
+                                                       className="btn btn-link mx-2" title={this.props.t("Edit")}>
                                                         <i className="fa fa-pencil"/>
                                                     </a>
                                                     <button className={"btn btn-link mx-2"} name={analysis.year}
-                                                            onClick={() => this.changeShowDialog(analysis.id)} title="Delete">
+                                                            onClick={() => this.changeShowDialog(analysis.id)} title={this.props.t("Delete")}>
                                                         <i className="fa fa-trash-o"/>
                                                     </button>
                                                 </td>
@@ -150,20 +150,20 @@ class CreateAnalysis extends Component {
                     onClose={this.changeShowDialog}
                     aria-labelledby="alert-dialog-title"
                     aria-describedby="alert-dialog-description">
-                    <DialogTitle id="alert-dialog-title">{"Please Confirm!"}</DialogTitle>
+                    <DialogTitle id="alert-dialog-title">{this.props.t("Please Confirm!")}</DialogTitle>
                     <DialogContent>
                         <DialogContentText id="alert-dialog-description">
-                            Are you sure you want to delete analysis? This action is permanent,
-                            and we're totally not just flipping a field called "deleted" to
-                            "true" in our database, we're actually deleting something.
+                            {
+                                this.props.t(`Are you sure you want to delete analysis? This action is permanent, and we're totally not just flipping a field called "deleted" to "true" in our database, we're actually deleting something.`)
+                            }
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={() => this.changeShowDialog(null)} color="primary" autoFocus >
-                            Cancel
+                            {this.props.t("Cancel")}
                         </Button>
                         <Button onClick={() => this.deleteAnalysis(this.state.deleteId)}  className="bg-danger text-white" >
-                            Delete
+                            {this.props.t("Delete")}
                         </Button>
                     </DialogActions>
                 </Dialog>

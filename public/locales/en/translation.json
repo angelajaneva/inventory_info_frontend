@@ -144,5 +144,12 @@
     "onoffswitch-inner": "onoffswitch-inner-en",
     "Save as": "Save as",
     "Drag 'n' drop file here, or click to select file": "Drag and drop file here, or click to select file",
-    "User Manual": "User Manual"
+    "User Manual": "User Manual",
+    "Are you sure you want to delete analysis? This action is permanent, and we're totally not just flipping a field called \"deleted\" to \"true\" in our database, we're actually deleting something.": "Are you sure you want to delete analysis? This action is permanent, and we're totally not just flipping a field called \"deleted\" to \"true\" in our database, we're actually deleting something.",
+    "Please Confirm!": "Please Confirm!",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "Cancel": "Cancel",
+    "Error": "Error",
+    "There was error, please try again!": "There was error, please try again!"
 }

@@ -37,7 +37,7 @@ export class Main extends Component {
         this.setState((prevState) => {
             const newValue = {
                 'tableView': tableView
-            }
+            };
 
             return {
                 ...prevState,
@@ -88,7 +88,7 @@ export class Main extends Component {
                                                 </div>
                                             </li>
                                         </ul>
-                                    <div className="ibox-content p-3 m-0 shadow font-weight-bold">
+                                    <div className="ibox-content p-3 m-0 shadow font-weight-bold scroll">
                                         {
                                             !this.props.selected || this.props.selected.length === 0 ? <Loading/>
                                             :

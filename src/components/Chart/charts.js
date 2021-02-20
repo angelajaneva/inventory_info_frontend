@@ -69,7 +69,8 @@ class Charts extends Component {
         if (this.props.isYearly){
             return [...new Set(this.props.selected.map(row => row.gas.name))]
         } else {
-            return [...new Set(this.props.selected.map(row => row.year.year))]
+            // 2016 and 1990 was not sorted
+            return [...new Set(this.props.selected.map(row => row.year.year))].sort()
         }
     };
 

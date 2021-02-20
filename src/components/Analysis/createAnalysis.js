@@ -31,12 +31,14 @@ class CreateAnalysis extends Component {
     }
 
     onChangeYear = (year) => {
-        this.setState(prevState => {
-            return {
-                ...prevState,
-                year: new Date(year).getFullYear()
-            }
-        })
+        if ((Number)(year)) {
+            this.setState(prevState => {
+                return {
+                    ...prevState,
+                    year: new Date(year).getFullYear()
+                }
+            })
+        }
     }
 
     onChangeFile = (file) => {
@@ -113,7 +115,7 @@ class CreateAnalysis extends Component {
             <div>
                 <TopHeader/>
 
-                <div className="container p-5 mt-3 bg-white shadow">
+                <div className="container p-5 mt-3 bg-white shadow animated fadeInDown">
                     {
                         this.state.loading ?
                             <Loading />
@@ -130,6 +132,7 @@ class CreateAnalysis extends Component {
                                             dateFormat={"YYYY"}
                                             timeFormat={false}
                                             closeOnSelect={true}
+                                            inputProps={{readOnly: true}}
                                         />
                                     </div>
                                     <div className="form-group">
@@ -137,6 +140,9 @@ class CreateAnalysis extends Component {
                                     </div>
                                     <div className={"form-group"}>
                                         <small>* {this.props.t("Upload Excel")} (*.xlsx)</small><br/>
+                                    </div>
+                                    <div className={"form-group"}>
+                                        <a href={process.env.PUBLIC_URL + "/files/Прирачник.pdf"} download ><i className="fa fa-file-pdf-o"/> {this.props.t('User Manual')}</a>
                                     </div>
                                     <div className="form-group">
                                         <button type={"submit"} className="btn btn-primary" >{this.props.t("Create")}</button>

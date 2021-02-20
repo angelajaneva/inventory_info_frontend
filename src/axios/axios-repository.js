@@ -55,6 +55,14 @@ const service = {
       }
     });
   },
+  getUser: (user) => {
+    return axios.post('/api/user', user, {
+      headers: {
+        'Content-Type': "application/json",
+        'Authorization': `Bearer ${localStorage.getItem(AUTH_TOKEN)}`
+      }
+    })
+  }
 
 };
 

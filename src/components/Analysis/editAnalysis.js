@@ -144,7 +144,7 @@ class CreateAnalysis extends Component {
         return (
             <div>
                 <TopHeader/>
-                <div className="container p-5 mt-3 bg-white shadow">
+                <div className="container p-5 mt-3 bg-white shadow animated fadeInDown">
                     {
                         this.state.loading ?
                             <Loading />
@@ -162,6 +162,7 @@ class CreateAnalysis extends Component {
                                             timeFormat={false}
                                             closeOnSelect={true}
                                             initialValue={this.state.analysis.year}
+                                            inputProps={{readOnly: true}}
                                         />
                                     </div>
                                     <div className="form-group">
@@ -170,6 +171,9 @@ class CreateAnalysis extends Component {
                                     <div className={"form-group"}>
                                         <small>* {this.props.t("Upload Excel")} (*.xlsx)</small><br/>
                                         <small>* {this.props.t("This field is optional")}</small>
+                                    </div>
+                                    <div className={"form-group"}>
+                                        <a href={process.env.PUBLIC_URL + "/files/Прирачник.pdf"} download ><i className="fa fa-file-pdf-o"/> {this.props.t('User Manual')}</a>
                                     </div>
                                     <div className="form-group">
                                         <button type={"submit"} className="btn btn-primary" >{this.props.t("Save")}</button>

@@ -9,6 +9,7 @@ import * as auth from '../../auth/auth';
 import PropTypes from 'prop-types';
 import {useTranslation} from 'react-i18next';
 import { useHistory } from "react-router-dom";
+import {isAdmin} from "../../auth/auth";
 
 const TopHeader = (props) => {
 
@@ -45,7 +46,7 @@ const TopHeader = (props) => {
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="ml-auto pl-4 collapse navbar-collapse" id="navbarText">
-                    {localStorage.getItem('auth_token') == null ? (
+                    {!isAdmin() ? (
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li className={"nav-item"}>
                                 <a className={i18n.language === "en" ? "border-right nav-link active" : "border-right nav-link "} onClick={() => handleClick('en')}>EN</a>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NewMenuTree = (props) => (
+const SubmenuTree = (props) => (
     <li className="nav-link pointer my-1">
         <input id={props.id}
                className="float-left checkbox-round"
@@ -30,7 +30,7 @@ const NewMenuTree = (props) => (
     </li>
 );
 
-NewMenuTree.propTypes = {
+SubmenuTree.propTypes = {
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,
     checked: PropTypes.bool,
@@ -38,4 +38,4 @@ NewMenuTree.propTypes = {
     level: PropTypes.number
 };
 
-export default NewMenuTree;
+export default SubmenuTree;

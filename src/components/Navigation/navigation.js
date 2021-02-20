@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 import {isEmpty} from 'lodash';
 import * as analysisActionCreator from "../../redux/actions/gas_year_category";
 
-import NewMenuItem from './newMenuItem';
-import NewMenuTree from './newMenuTree';
+import SubmenuItem from './submenuItem';
+import SubmenuTree from './submenuTree';
 import MenuItem from './menuItem';
 import MenuTree from './menuTree';
 import $ from 'jquery';
@@ -472,14 +472,14 @@ class Navigation extends Component {
         return data.map((item, index) => {
             if (item.name != null) {
                 if (isEmpty(item.tree)) {
-                    return (<NewMenuItem key={index}
+                    return (<SubmenuItem key={index}
                                          id={item.id}
                                          label={this.props.t(item.name)}
                                          checked={item.checked}
                                          onChange={onChange}/>)
                 } else {
                     return (
-                        <NewMenuTree key={index}
+                        <SubmenuTree key={index}
                                      id={item.id}
                                      label={this.props.t(item.name)}
                                      checked={item.checked}
@@ -488,7 +488,7 @@ class Navigation extends Component {
                             {
                                 item.tree.map((treeItem, treeIndex) => {
                                     if (isEmpty(treeItem.tree)) {
-                                        return (<NewMenuItem
+                                        return (<SubmenuItem
                                             key={treeIndex}
                                             id={treeItem.id}
                                             label={this.props.t(treeItem.name)}
@@ -496,24 +496,24 @@ class Navigation extends Component {
                                             onChange={onChange}/>)
                                     }
                                     return (
-                                        <NewMenuTree key={treeItem.id}
+                                        <SubmenuTree key={treeItem.id}
                                                      id={treeItem.id}
                                                      label={this.props.t(treeItem.name)}
                                                      checked={treeItem.checked}
                                                      level={3}
                                                      onChange={onChange}>
                                             {treeItem.tree.map((subItem, subIndex) => {
-                                                return (<NewMenuItem key={subIndex}
+                                                return (<SubmenuItem key={subIndex}
                                                                      id={subItem.id}
                                                                      label={this.props.t(subItem.name)}
                                                                      checked={subItem.checked}
                                                                      onChange={onChange}/>);
                                             })}
-                                        </NewMenuTree>
+                                        </SubmenuTree>
                                     )
                                 })
                             }
-                        </NewMenuTree>
+                        </SubmenuTree>
                     )
                 }
             }

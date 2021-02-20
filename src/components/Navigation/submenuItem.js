@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {useTranslation} from "react-i18next";
 
 
-const NewMenuItem = (props) => {
+const SubmenuItem = (props) => {
     const { t } = useTranslation();
 
     return (
@@ -18,11 +18,11 @@ const NewMenuItem = (props) => {
     </li>)
 };
 
-NewMenuItem.propTypes = {
+SubmenuItem.propTypes = {
     id: PropTypes.number.isRequired,
     label: PropTypes.string.isRequired,
     checked: PropTypes.bool,
     tree: PropTypes.bool
 };
 
-export default NewMenuItem;
+export default SubmenuItem;

@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+## Портал за приказ на инвентарот на стакленички гасови
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Краток опис на веб апликацијата
+#### База на податоци
+Апликацијата користи **postgresSQL** локална база на податоци, каде што се претставени гасови, години, категории и соодветна табела за гас-година-категорија каде што се содржи 
+концентрацијата на одреден гас од одредена година и категорија.
+#### [Backend апликација](https://github.com/angelajaneva/InventoryInfo)
+Како backend се користи **Spring boot** апликација заедно со **Spring Security** за најава на админ кој внесува податоци. Пред да се стартува апликацијата во делот resources/application.properties
+треба да се вметнат конфигурации за соодветна база на податоци. Првиот пат кога ќе се стартува апликацијата се креираат соодветните табели и корисник со
+улога ADMIN со креденцијали кои понатаму може да се променат. <br/>
+Во resources/files делот на апликацијата може да се најдат датотеки со податоците кои треба да се внесат. 
+Процесот на внесување може да се изврши преку соодветен интерфејс на начин објаснет во делот за frontend апликација. 
+#### [Frontend апликација](https://github.com/angelajaneva/inventory_info_frontend)
+Frontend делот е изграден со **ReactJS**. Податоците за приказ се земаат со повик кон backend апликацијата и за чување на истите се користи **Redux**.
+Дополнително, во апликацијата се користат и bootstrap, chart.js за приказ на графици, како и [други](https://github.com/angelajaneva/inventory_info_frontend/blob/master/package.json)
+библиотеки. <br/>
+Апликацијата е достапна на англиски и македонски јазик, а соодветните преводи може да се најдат во делот public/locales на frontend апликацијата. На овој начин, лесно може да се додадат и
+други поддржани јазици. <br/>
+Во делот _Најавете се_, се најавува соодветниот админ за внес на податоци. Таму се прикажани фајловите со податоци за сите години и истите може да се менуваат и бришат. 
+Овде се наоѓа и делот за внесување на податоци што се прави со прикачување на .xlsx датотека за соодветната година. <br/>
+Како објаснување, може да се најде и **pdf прирачник** со упатство за употреба во кој ги има точните чекори за внесување датотеки, модифицирање, бришење и формат. <br/>
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Изработиле:
+Кирил Ристов <br/>
+Ангела Јанева

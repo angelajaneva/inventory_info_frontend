@@ -2,25 +2,28 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import * as authorization from '../../auth/auth'
 
+import {useTranslation} from "react-i18next";
+
 const AUTH_TOKEN = 'auth_token';
 
 
 const LoginForm = (props) => {
 
     const history = useHistory();
+    const [t] = useTranslation();
 
     const login = (e) => {
         e.preventDefault();
 
         const auth = {
-            "username" :e.target.email.value,
+            "username" :e.target.username.value,
             "password" :e.target.password.value
         };
 
         props.login(auth, (response)=>{
 
             localStorage.setItem(AUTH_TOKEN, response.data);
-            localStorage.setItem("EMAIL", auth.username);
+            localStorage.setItem("username", auth.username);
 
             authorization.login(response.data, auth.username);
 
@@ -33,23 +36,19 @@ const LoginForm = (props) => {
       <div>
         <input
           className="form-control"
-          placeholder="Email"
-          name="email"
+          placeholder={t("Username")}
+          name="username"
           type="text"
-          // fa="fa fa-at"
-          // validate={[required, email]}
-          // component={RenderField}
+          required={true}
         />
       </div>
       <div>
         <input
           className="form-control"
-          placeholder="Password"
+          placeholder={t("Password")}
           name="password"
           type="password"
-          // fa="fa fa-key"
-          // validate={[required]}
-          // component={RenderField}
+          required={true}
         />
       </div>
       <div className="text-left">
@@ -61,7 +60,7 @@ const LoginForm = (props) => {
     // cursor="pointer"
     // label="<span className='checkbox-label'> Remember Me </span>"
     />
-          <span className='checkbox-label'>Remember Me </span>
+          <span className='checkbox-label'>{t("Remember me")} </span>
       </div>
         <br/>
       <button type="submit"
@@ -70,7 +69,7 @@ const LoginForm = (props) => {
               className="btn btn-primary block full-width m-b">
         {/*// disabled={pristine || submitting || invalid}>*/}
         {/*//         Login*/}
-          Login</button>
+          {t("Log in")}</button>
     </form>
   );
 };

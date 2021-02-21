@@ -11,6 +11,8 @@ import Loading from '../Loading/loading';
 import { correctHeight, detectBody } from '../../helpers/helpers';
 import { toastr } from 'react-redux-toastr';
 
+import {withTranslation} from "react-i18next";
+
 EnhancedSwitch.propTypes = {
   ...EnhancedSwitch.propTypes,
   cursor: PropTypes.string
@@ -19,7 +21,9 @@ EnhancedSwitch.propTypes = {
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+        error: ""
+    };
   }
 
   componentDidMount() {
@@ -37,10 +41,29 @@ class Login extends Component {
             axios.getUser({"username": authInfo.username}).then((response) => {
                 if (response.status === 200) {
                     localStorage.setItem("role", response.data.role[0].name);
+                    this.setState((prevState) => {
+                        const newValue = {
+                            error: ""
+                        }
+                        return {
+                            ...prevState,
+                            ...newValue
+                        }
+                    })
                 }
             })
         }
-    })
+    }).catch((error) => {
+            this.setState((prevState) => {
+                const newValue = {
+                    error: "Wrong username or password!"
+                }
+                return {
+                    ...prevState,
+                    ...newValue
+                }
+            })
+        })
   };
 
 render() {
@@ -54,15 +77,19 @@ render() {
     return (
         <div className="gray-bg">
           <div className="middle-box text-center loginscreen animated fadeInDown" style={{paddingBottom: '40px'}}>
+              <div className="row mx-auto">
+                  <p className="text-danger">
+                      {this.props.t(this.state.error)}
+                  </p>
+              </div>
+              <LoginForm login={this.login}/>
 
-            <LoginForm login={this.login}/>
-
-            <br/>
-            <CopyRight/>
+              <br/>
+              <CopyRight/>
           </div>
         </div>
     );
   }
 
 }
-export default Login
+export default withTranslation()(Login)

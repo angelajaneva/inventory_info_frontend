@@ -151,5 +151,9 @@
     "Edit": "Edit",
     "Cancel": "Cancel",
     "Error": "Error",
-    "There was error, please try again!": "There was error, please try again!"
+    "There was error, please try again!": "There was error, please try again!",
+    "Wrong username or password!": "Wrong username or password!",
+    "Remember me": "Remember me",
+    "Username": "Username",
+    "Password": "Password"
 }

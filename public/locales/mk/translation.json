@@ -151,5 +151,9 @@
     "Edit": "Измени",
     "Cancel": "Откажи",
     "Error": "Грешка",
-    "There was error, please try again!": "Се појави грешка, ве молиме обидете се повторно!"
+    "There was error, please try again!": "Се појави грешка, ве молиме обидете се повторно!",
+    "Wrong username or password!": "Погрешно корисничко име или лозинка!",
+    "Remember me": "Запомни ме",
+    "Username": "Корисничко име",
+    "Password": "Лозинка"
 }

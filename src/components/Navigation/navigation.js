@@ -52,6 +52,9 @@ class Navigation extends Component {
             $("#leftCol").metisMenu({
                 toggle: true
             });
+            if (window.innerWidth <= 700){
+                $("body").addClass("mini-navbar")
+            }
         });
         // this.props.getAnalysis()
         this.props.onSelected(this.state.gasses, this.state.categories, this.state.analysis);

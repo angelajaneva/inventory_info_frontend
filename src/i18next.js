@@ -17,6 +17,7 @@ i18n
     // init i18next
     .init({
         fallbackLng: fallbackLng,
+        lng: 'mk',
         debug: false,
         whitelist: availableLanguages,
         keySeparator: '_',
